@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="myScript.js"></script>
+</head>
+<body>
+<!-- First Page; buttons for jumping to parts of the page -->
+<div class="firstPage">
+    <div class="pageSelectionBar">
+        <button type="button" onclick="document.getElementById('secondPage').scrollIntoView();">Generate.</button>
+        <button type="button" onclick="document.getElementById('thirdPage').scrollIntoView();">Evaluate.</button>
+        <button type="button" onclick="document.getElementById('fourthPage').scrollIntoView();">About.</button>
+    </div>
+    <!-- Quote -->
+    <div class="quote">
+        <h2>A safe password is key for peace of mind.</h2>
+    </div>
+    <div class="bottomBarOnFirstPage">
+        <h1></h1>
+    </div>
+</div>
+<!-- Second Page; generate password block -->
+<div id="secondPage" class="secondPage">
+    <div>
+        <h1 class="bigSaying">Generate.</h1>
+    </div>
+    <div class="generatePasswordBlock">
+        <div class="generatedPasswordSelections">
+        <div>
+            <label for="generatePassword"></label><input type="text" id="generatePassword">
+        </div>
+        <!-- password checklist -->
+        <div class="generatedPasswordFlex"><input type="checkbox" name="passwordChar" id="specialCharacters" value="special characters" /><h1>add special characters</h1></div>
+        <div class="generatedPasswordFlex"><input type="checkbox" name="passwordChar" id="uppercase" value="uppercase" /><h1>add uppercase</h1></div>
+        <div class="generatedPasswordFlex"><input type="checkbox" name="passwordChar" id="lowercase" value="lowercase" /><h1>add lowercase</h1></div>
+        <div class="generatedPasswordFlex"><input type="checkbox" name="passwordChar" id="numbers" value="numbers" /><h1>add numbers</h1></div>
+        <div>
+            <button class="passwordCreateButton" type="button" onclick="generatePassword()">CREATE</button>
+        </div>
+        </div>
+        <div class="generatedPassword">
+            <p id="password" class="password"></p>
+        </div>
+    </div>
+</div>
+<!-- Third Page; evaluate password block-->
+<div id="thirdPage" class="thirdPage">
+    <div>
+        <h1 class="bigSaying">Evaluate.</h1>
+    </div>
+    <div class="evaluatePasswordBlock">
+        <div class="passwordChecklist">
+            <h1>Password Checklist</h1>
+            <p id="invalidCharacters"></p>
+            <p id="isInRockYou"></p>
+            <p id="lessThanEight"></p>
+            <p id="insideSpecialFunction"></p>
+            <p id="hasSpecialCharacter"></p>
+            <p id="hasNumber"></p>
+            <p id="hasUppercase"></p>
+            <p id="hasLowercase"></p>
+            <p id="totalCombinations"></p>
+            <p id="timeToHack"></p>
+        </div>
+        <div class="evaluateButtonandInput">
+            <label for="myText"></label><input class="evaluatePasswordInput" type="text" id="myText">
+            <div>
+                <button class="testButton" style="font-family: 'Roboto', sans-serif" type="button" onclick="isStrongPass()">TEST</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fourth Page; about section-->
+<div id="fourthPage" class="fourthPage">
+    <div>
+        <h1 class="bigSaying">About.</h1>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: yellow;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: grid;
+}
+.logo{
+}
+.quote {
+    cursor: default;
+    position: absolute;
+    font-size: 2vw;
+    margin: auto;
+    background-color: transparent;
+    color: orange;
+    text-align: center;
+    width: 100%;
+    bottom: 50%;
+    animation: myAnimQuote 1s ease 0s 1 normal forwards;
+}
+.bottomBarOnFirstPage{
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 7%;
+    font-size: 0.7vw;
+    text-align: center;
+
+}
+.pageSelectionBar{
+    position: fixed;
+    background-color: red;
+    text-align: center;
+    z-index: 2;
+    width: 100%;
+}
+.pageSelectionBar button{
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+.bigSaying{
+    cursor: default;
+    width: fit-content;
+    background-color: red;
+    font-size: 5vw;
+}
+.generatePasswordBlock {
+    margin-top: 10%;
+    margin-left: 10%;
+    background: red;
+    font-family: 'Archivo', sans-serif;
+    display: flex;
+    font-size: 0.8vw;
+}
+.generatedPasswordSelections{
+    background-color: pink;
+    text-align: center;
+    width: 20vw;
+}
+.generatedPasswordFlex{
+    display: flex;
+}
+.generatedPassword{
+    background-color: yellow;
+    height: 10%;
+    width: 50%;
+}
+.evaluatePasswordBlock {
+    width: fit-content;
+    background-color: red;
+    position: relative;
+    display: flex;
+}
+.passwordChecklist{
+    margin-right: 10%;
+    background-color: yellow;
+    border-style: solid;
+    border-width: medium;
+    margin-left: 10%;
+}
+.password{
+    text-align: center;
+    font-size: 3vw;
+}
+.passwordCreateButton{
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+.evaluatePasswordInput{
+    width: 50vw;
+    height: 5vw;
+    font-size: 4vw;
+    font-family: 'Roboto', sans-serif;
+    border-top-right-radius: 0;
+}
+.evaluateButtonandInput{
+    display: flex;
+    background-color: red;
+}
+.testButton{
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+}
+.firstPage{
+    height:100vh;
+    background-color: transparent;
+    background-size: contain;
+}
+.secondPage{
+    height: 100vh;
+    background-color: green;
+    background-size: contain;
+}
+.thirdPage{
+    height: 100vh;
+    background-color: pink;
+    background-size: contain;
+}
+.fourthPage{
+    height: 100vh;
+    background-color: blue;
+    background-size: contain;
+}
+@keyframes myAnimQuote {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+
+    38% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    55% {
+        animation-timing-function: ease-in;
+        transform: translateY(-65px);
+    }
+
+    72% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    81% {
+        animation-timing-function: ease-in;
+        transform: translateY(-28px);
+    }
+
+    90% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+
+    95% {
+        animation-timing-function: ease-in;
+        transform: translateY(-8px);
+    }
+
+    100% {
+        animation-timing-function: ease-out;
+        transform: translateY(0);
+    }
+}
